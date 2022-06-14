@@ -6,13 +6,12 @@ import { CreateOrderRequestDto } from './create_order_request.dto';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
-  }
   @Post()
   createOrder(@Body() createOrderRequest: CreateOrderRequestDto) {
-    console.log('entrou no post (api-gateway)', createOrderRequest);
+    console.log(
+      'acessando {POST > createOrder} em api-gateway com o body: ',
+      createOrderRequest,
+    );
     this.appService.createOrder(createOrderRequest);
   }
 }

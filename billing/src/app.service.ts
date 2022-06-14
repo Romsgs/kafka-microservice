@@ -7,6 +7,7 @@ export class AppService {
     return 'Hello World!';
   }
   handleOrderCreated(orderCreatedEvent: OrderCreatedEvent) {
-    console.log(orderCreatedEvent);
+    console.log('este é toda a mensagem: ')
+    console.dir(orderCreatedEvent);
   }
 }

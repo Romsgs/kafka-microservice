@@ -13,6 +13,7 @@ export class AppController {
 
   @EventPattern('order_created')
   handleOrderCreated(data: any) {
-    this.appService.handleOrderCreated(data.value);
+    console.log('evento detectado! \nlendo menssagem...');
+    this.appService.handleOrderCreated(data);
   }
 }
